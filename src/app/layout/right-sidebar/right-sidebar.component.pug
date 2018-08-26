@@ -1,0 +1,137 @@
+.sidebar-inner.sidebar-overlay
+.sidebar-inner.sidebar-overlay
+  mat-tab-group.sidebar-right-tab-group
+    mat-tab(label='Chat')
+      form.form-horizontal
+        .form-group.row
+          .col
+            mat-form-field.float-auto.search(floatPlaceholder='auto')
+              input(matInput='', placeholder='Search...', type='text')
+              mat-icon.search-icon(matPrefix='') search
+      ul.description
+        li.title
+          | Online
+      ul.list-group.p-0
+        li.list-group-item(mat-ripple='', data-chat-name='John Smith')
+          span.float-left
+            img.rounded-circle.max-w-40.m-r-10(src='assets/img/profiles/07.jpg', alt='')
+          i.badge.mini.success.status
+          .list-group-item-body
+            .list-group-item-heading John Smith
+            .list-group-item-text New York, NY
+        li.list-group-item(mat-ripple='', data-chat-name='Allison Grayce')
+          span.float-left
+            img.rounded-circle.max-w-40.m-r-10(src='assets/img/profiles/05.jpg', alt='')
+          i.badge.mini.success.status
+          .list-group-item-body
+            .list-group-item-heading Allison Grayce
+            .list-group-item-text Seattle, WA
+        li.list-group-item(mat-ripple='', data-chat-name='Ashley Ford')
+          span.float-left
+            img.rounded-circle.max-w-40.m-r-10(src='assets/img/profiles/18.jpg', alt='')
+          i.badge.mini.success.status
+          .list-group-item-body
+            .list-group-item-heading Ashley Ford
+            .list-group-item-text Denver, CO
+        li.list-group-item(mat-ripple='', data-chat-name='Johanna Kollmann')
+          span.float-left
+            img.rounded-circle.max-w-40.m-r-10(src='assets/img/profiles/11.jpg', alt='')
+          i.badge.mini.success.status
+          .list-group-item-body
+            .list-group-item-heading Johanna Kollmann
+            .list-group-item-text Palo Alto, Ca
+      ul.description
+        li.title
+          | Busy
+      ul.list-group.p-0
+        li.list-group-item(mat-ripple='', data-chat-name='Mike Jones')
+          span.float-left
+            img.rounded-circle.max-w-40.m-r-10(src='assets/img/profiles/03.jpg', alt='')
+          i.badge.mini.warning.status
+          .list-group-item-body
+            .list-group-item-heading Mike Jones
+            .list-group-item-text San Francisco, CA
+        li.list-group-item(mat-ripple='', data-chat-name='Nikki Clark')
+          span.float-left
+            img.rounded-circle.max-w-40.m-r-10(src='assets/img/profiles/06.jpg', alt='')
+          i.badge.mini.warning.status
+          .list-group-item-body
+            .list-group-item-heading Nikki Clark
+            .list-group-item-text Sarasota, FL
+        li.list-group-item(mat-ripple='', data-chat-name='Jason Kendall')
+          span.float-left
+            img.rounded-circle.max-w-40.m-r-10(src='assets/img/profiles/15.jpg', alt='')
+          i.badge.mini.warning.status
+          .list-group-item-body
+            .list-group-item-heading Jason Kendall
+            .list-group-item-text New York, NY
+      ul.description
+        li.title
+          | Offline
+      ul.list-group.p-0
+        li.list-group-item(mat-ripple='', data-chat-name='Josh Hemsley')
+          span.float-left
+            img.rounded-circle.max-w-40.m-r-10(src='assets/img/profiles/16.jpg', alt='')
+          i.badge.mini.danger.status
+          .list-group-item-body
+            .list-group-item-heading Josh Hemsley
+            .list-group-item-text Salem, MA
+        li.list-group-item(mat-ripple='', data-chat-name='James Hart')
+          span.float-left
+            img.rounded-circle.max-w-40.m-r-10(src='assets/img/profiles/09.jpg', alt='')
+          i.badge.mini.danger.status
+          .list-group-item-body
+            .list-group-item-heading James Hart
+            .list-group-item-text Salem, MA
+    mat-tab(label='Activity')
+      .sidebar-timeline
+        .time-item
+          .item-info
+            small.text-muted 15 minutes ago
+            p
+              a.accent(href='#') Mike Jones
+              |  fixed z-index conflict sidebar.scss
+        .time-item
+          .item-info
+            small.text-muted 30 minutes ago
+            p
+              a.accent(href='javascript:void(0)') Hazel	Dean
+              |  left a comment on product page designs.
+            p
+              em
+                | "Yuccie shoreditch trust fund, artisan tumblr sustainable cronut unicorn blog seitan. "
+        .time-item
+          .item-info
+            small.text-muted 45 minutes ago
+            p
+              a.accent(href='javascript:void(0)') Molly
+              |  requested time off for training.
+            p
+              em
+                | "Snackwave church-key cardigan you probably haven't heard of them, asymmetrical microdosing cronut "
+        .time-item
+          .item-info
+            small.text-muted 3 hours ago
+            p
+              a.accent(href='javascript:void(0)') Frederick	Roy
+              |  commented your post.
+            p
+              em
+                | "Skateboard dreamcatcher la croix, edison bulb sustainable sriracha vexillologist kombucha master cleanse."
+        .time-item
+          .item-info
+            small.text-muted 1 hour ago
+            p
+              a.accent(href='javascript:void(0)') Holly Cobb
+              |  Uploaded 6 new photos.
+        .time-item
+          .item-info
+            small.text-muted 5 hours ago
+            p
+              a.accent(href='javascript:void(0)') Neal Stephens
+              |  setup a meeting with
+              a.text-success(href='#')  Jason Kendall
+              | .
+            p
+              em
+                | "Authentic aesthetic tattooed, PBR&B squid tote bag schlitz vaporware glossier yr man braid direct trade disrupt poke.  "

@@ -1,0 +1,254 @@
+nav.navbar(role='navigation')
+  ul.navbar-nav.nav-logo
+    li.nav-item.logo-wrapper
+      a(href='javascript:void(0)', [routerLink]="['/admin']")
+        .logo
+          img(src='assets/img/logo/logo-icon.png', alt='Logo')
+        h1.brand-text P & C
+  ul.navbar-nav.nav-left
+    li.nav-item.menu-icon
+      a.nav-link.menu-trigger(mat-ripple='', href='javascript:void(0)', role='button', (click)='toggleMenuSideabar()')
+        i.mdi.mdi-backburger
+    li.nav-item.hidden-sm
+      a.nav-link.mobile-menu-trigger(mat-ripple='', href='javascript:void(0)', (click)='toggleAppMobileLeftMenuSidebar()')
+        i.mdi.mdi-backburger
+    li.nav-item.hidden-sm-down
+      a.nav-link(mat-ripple='', href='javascript:void(0)', (click)='toggleProfile()')
+        i.zmdi.zmdi-account
+    li.nav-item.dropdown.dropdown-lg.app_menu_launcher.hidden-sm-down(ngbDropdown='')
+      a.nav-link(mat-ripple='', href='javascript:void(0)', ngbDropdownToggle='')
+        i.zmdi.zmdi-apps
+      ul.dropdown-menu.dropdown-lg-menu.btn-accent.p-15.text-center
+        li
+          ul
+            li
+              a([routerLink]="['/mail']")
+                i.zmdi.zmdi-email
+                span Mail
+            li
+              a([routerLink]="['/contacts']")
+                i.zmdi.zmdi-accounts-list
+                span Contacts
+            li
+              a([routerLink]="['/chats']")
+                i.zmdi.zmdi-comment-text
+                span Chat
+        li
+          ul
+            li
+              a([routerLink]="['/notes']")
+                i.mdi.mdi-lightbulb
+                span Notes
+            li
+              a(href='javascript:void(0)')
+                i.zmdi.zmdi-view-column
+                span Taskboard
+            li
+              a([routerLink]="['/calendar']")
+                i.zmdi.zmdi-calendar-note
+                span Calendar
+    li.nav-item.dropdown.mega.hidden-sm-down(ngbDropdown='')
+      a.nav-link(mat-ripple='', href='javascript:void(0)', ngbDropdownToggle='')
+        span Mega
+        span.caret
+      .dropdown-menu.dropdown-menu.full-width.p-l-10
+        .row
+          .col-4
+            h3
+              | Application Views  
+              span.badge.status.info 10
+            .row
+              .col-6
+                ul
+                  li
+                    a.btn-primary-hover([routerLink]="['/mail']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      |  Mail
+                  li
+                    a.btn-primary-hover([routerLink]="['/ecommerce/ecom-dashboard']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      |   E-commerce Dashboard
+                  li
+                    a.btn-primary-hover([routerLink]="['/ecommerce/ecom-products']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      | Products
+                  li
+                    a.btn-primary-hover([routerLink]="['/ecommerce/ecom-customers']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      | Customers
+                  li
+                    a.btn-primary-hover([routerLink]="['/ecommerce/ecom-settings']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      | Settings
+              .col-6
+                ul
+                  li
+                    a.btn-primary-hover([routerLink]="['/chat']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      | Chat
+                  li
+                    a.btn-primary-hover([routerLink]="['/calendar']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      | Calendar
+                  li
+                    a.btn-primary-hover([routerLink]="['/contacts']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      | Contacts
+                  li
+                    a.btn-primary-hover([routerLink]="['/locations']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      | Office Locations
+                  li
+                    a.btn-primary-hover([routerLink]="['/notes']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      |   Notes
+          .col-4
+            h3
+              | Pages  
+              span.badge.status.info 10
+            .row
+              .col-6
+                ul
+                  li
+                    a.btn-primary-hover([routerLink]="['/profile']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      |  Profile
+                  li
+                    a.btn-primary-hover([routerLink]="['/invoice']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      |   Invoice
+                  li
+                    a.btn-primary-hover([routerLink]="['/timeline']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      |  Timeline
+                  li
+                    a.btn-primary-hover([routerLink]="['/pricing-tables']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      |   Pricing Tables
+                  li
+                    a.btn-primary-hover([routerLink]="['/gallery']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      | Photo Gallery
+              .col-6
+                ul
+                  li
+                    a.btn-primary-hover([routerLink]="['/locations']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      |   Locations
+                  li
+                    a.btn-primary-hover([routerLink]="['/error/404']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      |  400 Error
+                  li
+                    a.btn-primary-hover([routerLink]="['/error/500']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      | 500 Error
+                  li
+                    a.btn-primary-hover([routerLink]="['/authentication/lock']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      |   Lock Screen
+                  li
+                    a.btn-primary-hover([routerLink]="['/authentication/login']")
+                      i.zmdi.zmdi-chevron-right.m-r-5
+                      |   Login
+          .col-4
+            h3 New Arrivals
+            ul.style-none.inline-block
+              li
+                img.max-w-100(src='/assets/img/ecom/products/39_Ie8T.jpeg', alt='')
+              li
+                img.max-w-100(src='/assets/img/ecom/products/39_8wMD.jpeg', alt='')
+              li
+                img.max-w-100(src='/assets/img/ecom/products/39_JnFC.jpeg', alt='')
+              li
+                img.max-w-100(src='/assets/img/ecom/products/2830_S4ql.jpeg', alt='')
+              li
+                img.max-w-100(src='/assets/img/ecom/products/4107_PPxC.jpeg', alt='')
+              li
+                img.max-w-100(src='/assets/img/ecom/products/5764_YK7g.jpeg', alt='')
+  ul.navbar-nav.nav-right
+    li.nav-item
+      a.nav-link(mat-ripple='', href='javascript:void(0)', (click)='search.searchStatus = true')
+        i.zmdi.zmdi-search
+    li.nav-item.dropdown.dropdown-lg.hidden-sm-down(ngbDropdown='')
+      a.nav-link(mat-ripple='', href='javascript:void(0)', ngbDropdownToggle='')
+        i.zmdi.zmdi-invert-colors
+      ul.dropdown-menu.dropdown-lg-menu.dropdown-menu-right.p-15.color-container
+        li.title
+          h3 Preset Color Options
+        li
+          .color-option-check
+            label(for='theme-a')
+              input#theme-a(type='radio', name='setting-theme', [(ngModel)]='currentTheme', (ngModelChange)='setTheme()', value='A')
+              span.icon-check
+              span.split
+                span.color.bg-primary-theme-a
+                span.color.bg-shade-theme-a
+              span.color.bg-menu-white
+        li
+          .color-option-check
+            label(for='theme-b')
+              input#theme-b(type='radio', name='setting-theme', [(ngModel)]='currentTheme', (ngModelChange)='setTheme()', value='B')
+              span.icon-check
+              span.split
+                span.color.bg-primary-theme-b
+                span.color.bg-shade-theme-b
+              span.color.bg-menu-white
+        li
+          .color-option-check
+            label(for='theme-c')
+              input#theme-c(type='radio', name='setting-theme', [(ngModel)]='currentTheme', (ngModelChange)='setTheme()', value='C')
+              span.icon-check
+              span.split
+                span.color.bg-primary-theme-c
+                span.color.bg-shade-theme-c
+              span.color.bg-menu-white
+        li
+          .color-option-check
+            label(for='theme-d')
+              input#theme-d(type='radio', name='setting-theme', [(ngModel)]='currentTheme', (ngModelChange)='setTheme()', value='D')
+              span.icon-check
+              span.split
+                span.color.bg-primary-theme-d
+                span.color.bg-shade-theme-d
+              span.color.bg-menu-white
+        li
+          .color-option-check
+            label(for='theme-e')
+              input#theme-e(type='radio', name='setting-theme', [(ngModel)]='currentTheme', (ngModelChange)='setTheme()', value='E')
+              span.icon-check
+              span.split
+                span.color.bg-primary-theme-e
+                span.color.bg-shade-theme-e
+              span.color.bg-menu-darkBlue
+        li
+          .color-option-check
+            label(for='theme-f')
+              input#theme-f(type='radio', name='setting-theme', [(ngModel)]='currentTheme', (ngModelChange)='setTheme()', value='F')
+              span.icon-check
+              span.split
+                span.color.bg-primary-theme-f
+                span.color.bg-shade-theme-f
+              span.color.bg-menu-darkBlue
+        li
+          .color-option-check
+            label(for='theme-g')
+              input#theme-g(type='radio', name='setting-theme', [(ngModel)]='currentTheme', (ngModelChange)='setTheme()', value='G')
+              span.icon-gheck
+              span.split
+                span.color.bg-primary-theme-g
+                span.color.bg-shade-theme-g
+              span.color.bg-menu-darkBlue
+        li
+          .color-option-check
+            label(for='theme-h')
+              input#theme-h(type='radio', name='setting-theme', [(ngModel)]='currentTheme', (ngModelChange)='setTheme()', value='H')
+              span.icon-check
+              span.split
+                span.color.bg-primary-theme-h
+                span.color.bg-shade-theme-h
+              span.color.bg-menu-darkBlue
+    li.nav-item
+      a.nav-link(mat-ripple='', href='javascript:void(0)', (click)='toggleAppRightSidebar()')
+        i.mdi([ngClass]="{'mdi-playlist-minus': false, 'mdi-playlist-plus': true}")
+topbar-search(#search='')

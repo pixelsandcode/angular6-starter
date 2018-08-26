@@ -1,0 +1,14 @@
+p.text-center
+  | constants works!
+.row
+  .col-6.text-center
+    h3 List
+    br
+    ol
+      li(*ngFor='let item of list')  {{item.name}}
+  .col-6.text-center(*ngIf='messages.length')
+    h3 Messages
+    button.clear((click)='clear()') clear
+    br
+    ol
+      li(*ngFor='let message of messages')  {{message}}

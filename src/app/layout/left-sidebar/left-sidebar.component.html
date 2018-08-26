@@ -1,0 +1,181 @@
+<nav id="app_main-menu-wrapper">
+	<ul class="nav-logo nav-mobile">
+		<li class="nav-item logo-wrapper">
+			<a href="javascript:void(0)" [routerLink]="['/dashboards']">
+				<div class="logo">
+					<img src="assets/img/logo/logo-icon.png" alt="Logo">
+				</div>
+				<h1 class="brand-text">Material Lab</h1>
+			</a>
+		</li>
+	</ul>
+	<div class="sidebar-inner sidebar-push" malihu-scrollbar [scrollbarOptions]="scrollbarOptions">
+		<profile></profile>
+		<ul class="nav nav-pills flex-column">
+			<li class="sidebar-header">NAVIGATION</li>
+			<li routerLinkActive="active"><a md-ripple href="javascript:void(0)" [routerLink]="['/dashboards']" class=""><i class="zmdi zmdi-view-dashboard"></i>Dashboards</a></li>
+			<li routerLinkActive="active open" appNavDropdown class="nav-dropdown">
+				<a md-ripple href="javascript:void(0)" class="" appNavDropdownToggle><i class="zmdi zmdi-widgets"></i>Cards</a>
+				<ul class="nav-sub">
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/cards/card-templates']">Card Templates</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/cards/card-demos']">Card Demos</a></li>
+				</ul>
+			</li>
+			<li routerLinkActive="active open" appNavDropdown class="nav-dropdown">
+				<a md-ripple href="javascript:void(0)" class="" appNavDropdownToggle><i class="zmdi zmdi-view-carousel"></i>Layouts</a>
+				<ul class="nav-sub">
+					<li routerLinkActive="active open" appNavDropdown class="nav-dropdown">
+						<a md-ripple href="javascript:void(0)" class="" appNavDropdownToggle>Full Width</a>
+						<ul class="nav-sub">
+							<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/page-layouts/full-width-v1']">Full Width v1</a></li>
+							<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/page-layouts/full-width-v2']">Full Width v2</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav-sub">
+					<li routerLinkActive="active open" appNavDropdown class="nav-dropdown">
+						<a md-ripple href="javascript:void(0)" class="" appNavDropdownToggle>Boxed Layouts</a>
+						<ul class="nav-sub">
+							<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/page-layouts/boxed-layout-v1']">Boxed Layout v1</a></li>
+							<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/page-layouts/boxed-layout-v2']">Boxed Layout v2</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav-sub">
+					<li routerLinkActive="active open" appNavDropdown class="nav-dropdown">
+						<a md-ripple href="javascript:void(0)" class="" appNavDropdownToggle>Detached Toolbar</a>
+						<ul class="nav-sub">
+							<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/page-layouts/detached-toolbar-left']">Detached Toolbar Left</a></li>
+							<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/page-layouts/detached-toolbar-right']">Detached Toolbar Right</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav-sub">
+					<li routerLinkActive="active open" appNavDropdown class="nav-dropdown">
+						<a md-ripple href="javascript:void(0)" class="" appNavDropdownToggle>Left Side Nav</a>
+						<ul class="nav-sub">
+							<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/page-layouts/left-side-nav-v1']">Left Side Nav v1</a></li>
+							<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/page-layouts/left-side-nav-v2']">Left Side Nav v2</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav-sub">
+					<li routerLinkActive="active open" appNavDropdown class="nav-dropdown">
+						<a md-ripple href="javascript:void(0)" class="" appNavDropdownToggle>Right Side Nav</a>
+						<ul class="nav-sub">
+							<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/page-layouts/right-side-nav-v1']">Right Side Nav v1</a></li>
+							<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/page-layouts/right-side-nav-v2']">Right Side Nav v2</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="sidebar-header">APPLICATION VIEWS</li>
+					<li routerLinkActive="active"><a md-ripple href="javascript:void(0)" class="" [routerLink]="['/calendar']"><i class="zmdi zmdi-calendar"></i>Calendar</a></li>
+					<li routerLinkActive="active"><a md-ripple href="javascript:void(0)" class="" [routerLink]="['/mail']"><i class="zmdi zmdi-email"></i>Mail</a></li>
+					<li routerLinkActive="active"><a md-ripple href="javascript:void(0)" class="" [routerLink]="['/chat']"><i class="zmdi zmdi-comments"></i>Chat</a></li>
+					<li routerLinkActive="active"><a md-ripple href="javascript:void(0)" class="" [routerLink]="['/contacts']"><i class="zmdi zmdi-accounts-list-alt"></i>Contacts</a></li>
+					<li routerLinkActive="active"><a md-ripple href="javascript:void(0)" class="" [routerLink]="['/locations']"><i class="zmdi zmdi-pin"></i>Office Locations</a></li>
+					<li routerLinkActive="active"><a md-ripple href="javascript:void(0)" class="" [routerLink]="['/notes']"><i class="zmdi zmdi-border-color"></i>Notes</a></li>
+					<li routerLinkActive="active open" appNavDropdown class="nav-dropdown">
+						<a md-ripple href="javascript:void(0)" class="" appNavDropdownToggle><i class="zmdi zmdi-shopping-cart"></i>E-Commerce</a>
+						<ul class="nav-sub">
+							<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/ecommerce/ecom-dashboard']">Dashboard</a></li>
+							<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/ecommerce/ecom-products']">Products</a></li>
+							<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/ecommerce/ecom-customers']">Customers</a></li>
+							<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/ecommerce/ecom-settings']">Settings</a></li>
+						</ul>
+					</li>
+				
+         <li class="sidebar-header">PAGE VIEWS</li>
+					<li routerLinkActive="active"><a md-ripple href="javascript:void(0)" class="" [routerLink]="['/profile']"><i class="zmdi zmdi-account"></i>Profile</a></li>
+					<li routerLinkActive="active"><a md-ripple href="javascript:void(0)" class="" [routerLink]="['/invoice']"><i class="zmdi zmdi-money"></i>Invoice</a></li>
+					<li routerLinkActive="active"><a md-ripple href="javascript:void(0)" class="" [routerLink]="['/timeline']"><i class="zmdi zmdi-time"></i>Timeline</a></li>
+					<li routerLinkActive="active"><a md-ripple href="javascript:void(0)" class="" [routerLink]="['/pricing-tables']"><i class="zmdi zmdi-view-column"></i>Pricing Tables</a></li>
+					<li routerLinkActive="active"><a md-ripple href="javascript:void(0)" class="" [routerLink]="['/gallery']"><i class="zmdi zmdi-collection-image"></i>Gallery</a></li>
+					<li routerLinkActive="active open" appNavDropdown class="nav-dropdown">
+						<a md-ripple href="javascript:void(0)" class="" appNavDropdownToggle><i class="zmdi zmdi-lock"></i>Authentication</a>
+						<ul class="nav-sub">
+							<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/authentication/login']">Login &amp; Register</a></li>
+							<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/authentication/lock']">Lock Screen</a></li>
+						</ul>
+					</li>
+					<li routerLinkActive="active open" appNavDropdown class="nav-dropdown">
+						<a md-ripple href="javascript:void(0)" class="" appNavDropdownToggle><i class="zmdi zmdi-alert-polygon"></i>Error Pages</a>
+						<ul class="nav-sub">
+							<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/error/404']">404 Page Not Found</a></li>
+							<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/error/500']">500 Server Error</a></li>
+						</ul>
+					</li>
+			 <li class="sidebar-header">Design Elements</li>
+			<li routerLinkActive="active open" appNavDropdown class="nav-dropdown">
+				<a md-ripple href="javascript:void(0)" class="" appNavDropdownToggle><i class="zmdi zmdi-palette"></i>User Interface</a>
+				<ul class="nav-sub">
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/user-interface/alerts']">Alerts</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/user-interface/animations']">Animations</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/user-interface/avatars']">Avatars</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/user-interface/buttons']">Buttons</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/user-interface/colors']">Colors</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/user-interface/grid']">Grid System</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/user-interface/icons']">Icons</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/user-interface/list']">List</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/user-interface/preloaders']">Preloaders</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/user-interface/badges-labels']">Badges &amp; Labels</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/user-interface/typography']">Typography</a></li>
+				</ul>
+			</li>
+			<li routerLinkActive="active open" appNavDropdown class="nav-dropdown">
+				<a md-ripple href="javascript:void(0)" class="" appNavDropdownToggle><i class="zmdi zmdi-ungroup"></i>Components</a>
+				<ul class="nav-sub">
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/components/notifications-dialogs']">Notifications &amp; Dialogs</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/components/toolbars']">Toolbars</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/components/collapsible']">Collapsible</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/components/drawers']">Drawers</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/components/dropdowns']">Dropdowns</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/components/modals']">Modals</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/components/sliders-progressbars']">Sliders &amp; Progressbars</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/components/scrollable']">Scrollable</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/components/tabs-pills']">Tabs &amp; Pills</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/components/tooltips-popovers']">Tooltips &amp; Popovers</a></li>
+				</ul>
+			</li>
+			<li routerLinkActive="active open" appNavDropdown class="nav-dropdown">
+				<a md-ripple href="javascript:void(0)" class="" appNavDropdownToggle><i class="zmdi zmdi-chart"></i>Charts</a>
+				<ul class="nav-sub">
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/charts/ngx-charts']">ngx-charts</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/charts/ng2-charts']">ng2-charts</a></li>
+				</ul>
+			</li>
+			<li routerLinkActive="active open" appNavDropdown class="nav-dropdown">
+				<a md-ripple href="javascript:void(0)" class="" appNavDropdownToggle><i class="zmdi zmdi-view-subtitles"></i>Forms</a>
+				<ul class="nav-sub">
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/forms/form-elements']">Form Elements</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/forms/form-components']">Form Components</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/forms/form-layouts']">Form Layouts</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/forms/form-validation']">Form Validation</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/forms/form-wizard']">Form Wizard</a></li>
+				</ul>
+			</li>
+			<li routerLinkActive="active open" appNavDropdown class="nav-dropdown">
+				<a md-ripple href="javascript:void(0)" class="" appNavDropdownToggle><i class="zmdi zmdi-view-headline"></i>Tables</a>
+				<ul class="nav-sub">
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/tables/basic-tables']">Basic Tables</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)" [routerLink]="['/tables/data-tables']">Data Tables</a></li>
+				</ul>
+			</li>
+			<li routerLinkActive="active open" appNavDropdown class="nav-dropdown">
+		<a md-ripple href="javascript:void(0)" class="" appNavDropdownToggle><i class="zmdi zmdi-format-align-left"></i>Menu Levels</a>
+		<ul class="nav-sub">
+			<li routerLinkActive="active open" appNavDropdown class="nav-dropdown">
+				<a md-ripple href="javascript:void(0)" class="" appNavDropdownToggle>Level 1.0</a>
+				<ul class="nav-sub">
+					<li routerLinkActive="active"><a href="javascript:void(0)">Level 2.0</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)">Level 2.1</a></li>
+					<li routerLinkActive="active"><a href="javascript:void(0)">Level 2.0</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li routerLinkActive="active"><a md-ripple href="javascript:void(0)" class="" [routerLink]="['/helper-classes']"><i class="zmdi zmdi-info"></i>Helper Classes</a></li>
+		</ul>
+	</div>
+</nav>

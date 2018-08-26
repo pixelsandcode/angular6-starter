@@ -1,0 +1,73 @@
+nav#app_main-menu-wrapper
+  ul.nav-logo.nav-mobile
+    li.nav-item.logo-wrapper
+      a(href='javascript:void(0)', [routerLink]="['/admin']")
+        .logo
+          img(src='assets/img/logo/logo-icon.png', alt='Logo')
+        h1.brand-text P&C
+  .sidebar-inner.sidebar-push
+    profile
+    ul.nav.nav-pills.flex-column
+      li.sidebar-header NAVIGATION
+      li(routerLinkActive='active open', [routerLinkActiveOptions]="{exact: true}")
+        a(mat-ripple='', href='javascript:void(0)')
+          i.zmdi.zmdi-chart
+          | Constants
+      li(routerLinkActive='active open')
+        a(mat-ripple='', href='javascript:void(0)' )
+          i.zmdi.zmdi-palette
+          | User Interface
+      li(routerLinkActive='active')
+        a(mat-ripple='', href='javascript:void(0)')
+          i.zmdi.zmdi-view-dashboard
+          | Dashboards
+      li.nav-dropdown(routerLinkActive='active open', appNavDropdown='')
+        a(mat-ripple='', href='javascript:void(0)', appNavDropdownToggle='')
+          i.zmdi.zmdi-widgets
+          | Cards
+        ul.nav-sub
+          li(routerLinkActive='active')
+            a(mat-ripple='', href='javascript:void(0)')
+              i.zmdi.zmdi-calendar
+              | Calendar
+          li(routerLinkActive='active')
+            a(mat-ripple='', href='javascript:void(0)')
+              i.zmdi.zmdi-email
+              | Mail
+      li.nav-dropdown(routerLinkActive='active open', appNavDropdown='')
+        a(mat-ripple='', href='javascript:void(0)', appNavDropdownToggle='')
+          i.zmdi.zmdi-view-carousel
+          | Layouts
+        ul.nav-sub
+          li(routerLinkActive='active')
+            a(mat-ripple='', href='javascript:void(0)')
+              i.zmdi.zmdi-comments
+              | Chat
+          li(routerLinkActive='active')
+            a(mat-ripple='', href='javascript:void(0)')
+              i.zmdi.zmdi-accounts-list-alt
+              | Contacts
+      li.sidebar-header APPLICATION VIEWS
+      li(routerLinkActive='active')
+        a(mat-ripple='', href='javascript:void(0)')
+          i.zmdi.zmdi-pin
+          | Office Locations
+      li(routerLinkActive='active')
+        a(mat-ripple='', href='javascript:void(0)')
+          i.zmdi.zmdi-border-color
+          | Notes
+      li.nav-dropdown(routerLinkActive='active open', appNavDropdown='')
+        a(mat-ripple='', href='javascript:void(0)', appNavDropdownToggle='')
+          i.zmdi.zmdi-shopping-cart
+          | E-Commerce
+        ul.nav-sub
+          li(routerLinkActive='active')
+            a(href='javascript:void(0)') Dashboard
+          li(routerLinkActive='active')
+            a(href='javascript:void(0)') Products
+          li(routerLinkActive='active')
+            a(href='javascript:void(0)') Customers
+          li(routerLinkActive='active')
+            a(href='javascript:void(0)') Settings
+
+//(malihu-scrollbar='', [scrollbaroptions]='scrollbarOptions')

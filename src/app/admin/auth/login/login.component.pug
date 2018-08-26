@@ -1,0 +1,55 @@
+#login_wrapper
+  .logo
+    //img.logo-img(src='/assets/img/logo/ml-logo.png', alt='logo')
+  section#login_content
+    h1.login-title
+      | Sign In to your account
+    .login-body
+      .alert.alert-warning([hidden]="!hasError")
+        p.layer Email or password is wrong!
+      form.form-horizontal([formGroup]="loginForm", novalidate, (ngSubmit)="onLogin()", #formDir="ngForm")
+        .form-group.row
+          label.sr-only Email:
+          .col-md
+            mat-form-field.float-auto(floatPlaceholder='auto')
+              input.form-control(matInput, placeholder='Email', type='email', name="email", formControlName="email", required)
+        .form-group.row
+          label.sr-only Password:
+          .col-md
+            mat-form-field.float-auto(floatPlaceholder='auto')
+              input.form-control(matInput, placeholder='Password', type='password', name="password", formControlName="password", required)
+        a.forgot-pass.float-right(href='javascript:void(0)') Forgot Password?
+        .checkbox.inline-block
+          mat-checkbox(name='remember')  Remember Me
+        button.btn.btn-info.btn-block.m-t-40(type='submit') Sign In
+          i.zmdi.zmdi-rotate-right.zmdi-hc-spin.animated.fadeIn(*ngIf="isLoading")
+
+//
+//#login_wrapper
+//  .logo
+//    img.logo-img(src='/assets/img/logo_green.png', alt='logo')
+//  section#login_content
+//    h1.login-title
+//      | وارد حساب کاربری خود شوید
+//    .login-body
+//      .alert.alert-warning([hidden]="!hasError")
+//        p.layer ایمیل یا کلمه عبور اشتباه است
+//      form.form-horizontal([formGroup]="loginForm", novalidate, (ngSubmit)="onLogin()", #formDir="ngForm")
+//        .form-group.row
+//          label.sr-only پست الکترونیک:
+//          .col-md
+//            mat-input-container.float-auto(dir="rtl", floatPlaceholder='auto')
+//              input.form-control(matInput, placeholder='پست اکترونیک', name="email", formControlName="email", type='email', required)
+//            p.error(*ngIf="email.invalid && (email.dirty || email.touched) && email?.errors?.email") لطفا یک ایمیل صحیح وارد کنید
+//        .form-group.row
+//          label.sr-only کلمه عبور:
+//          .col-md
+//            mat-input-container.float-auto(dir="rtl", floatPlaceholder='auto')
+//              input.form-control(matInput, placeholder='کلمه عبور', name="password", formControlName="password", type='password', required)
+//            p.error(*ngIf="password.invalid && (password.dirty || password.touched) && password?.errors?.required") لطفا کلمه عبور را وارد کنید
+//        .checkbox.inline-block
+//          mat-checkbox(dir="rtl", name='remember', formControlName="remember",)  مرا به خاطر بسپار
+//        button.btn.btn-info.btn-block.m-t-40(type="submit", mat-ripple)
+//          |          ورود
+//          //mat-icon(*ngIf="isLoading", svgIcon="thumbs-up")
+//          i.zmdi.zmdi-rotate-right.zmdi-hc-spin.animated.fadeIn(*ngIf="isLoading")

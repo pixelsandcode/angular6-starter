@@ -1,0 +1,29 @@
+#profile-menu.card.profile-menu
+  header.card-header.card-img.alt-heading(
+  [ngClass]="{'open' : isProfileVisible}",
+  [ngStyle]="{background: 'url(' + 'assets/img/headers/' + profile.backgroundImg  + ')'}")
+    .profile
+      header#card_img_02.card-heading.card-background
+        img.rounded-circle.max-w-75(src='assets/img/profiles/{{profile.profileImg}}', alt='')
+      a.info(
+      href='javascript:void(0)',
+      [ngClass]="{'open' : isProfileSubmenuVisible}",
+      (click)='isProfileSubmenuVisible = !isProfileSubmenuVisible;')
+        span {{profile.email}}
+  ul.submenu([ngClass]="{'open' : isProfileSubmenuVisible}")
+    li
+      a(href='javascript:void(0)', mat-ripple='')
+        i.zmdi.zmdi-account
+        |  Profile
+    li
+      a(href='javascript:void(0)', mat-ripple='')
+        i.zmdi.zmdi-email
+        |  Messages
+    li
+      a(href='javascript:void(0)', mat-ripple='')
+        i.zmdi.zmdi-settings
+        |  Account Settings
+    li
+      a(href='javascript:void(0)', mat-ripple='')
+        i.zmdi.zmdi-sign-in
+        |  Sign Out

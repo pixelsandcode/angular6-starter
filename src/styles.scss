@@ -1,0 +1,12 @@
+/*------------------------------------------------------------------------------
+  Material Lab - Angular 4 Seed Project
+------------------------------------------------------------------------------*/
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+//== Vendor
+@import '../node_modules/multi-brand-colors/dist/scss/index.scss';
+//@import '../node_modules/@mdi/angular-material/';
+@import '../node_modules/@mdi/font/css/materialdesignicons.min.css';
+@import '../node_modules/material-design-iconic-font/dist/css/material-design-iconic-font.css';
+//== App
+@import "./app/shared/styles/app";

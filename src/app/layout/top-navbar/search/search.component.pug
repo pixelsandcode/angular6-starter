@@ -1,0 +1,5 @@
+#navbar_form.navbar-form([class.open]='searchStatus')
+  .form-group
+    input#navbar_search.form-control(type='text', placeholder='Search and press enter...', [(ngModel)]='searchValue')
+    i.zmdi.zmdi-close.close-search((click)='closeSearch()')
+  button.hidden.btn.btn-default(type='submit') Submit
