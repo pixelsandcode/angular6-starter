@@ -4,7 +4,7 @@ import { ConfigService } from '../../services/config/config.service';
 
 @Component({
   selector: 'app-backdrop',
-  templateUrl: './app_backdrop.component.html',
+  templateUrl: './app_backdrop.component.pug',
   styleUrls: ['./app_backdrop.component.scss']
 })
 export class AppBackdropComponent implements OnInit {

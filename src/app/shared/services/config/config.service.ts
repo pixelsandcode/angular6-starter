@@ -7,8 +7,19 @@ export class ConfigService {
   public profile: any;
   public appLayout: any;
   public breakpoint: any;
+  public notificationOptions: any;
+  public baseUrl: any;
 
   constructor() {
+    this.baseUrl = 'http://projects.pixelsandcode.com.au/api/';
+    this.notificationOptions = {
+      position: ['bottom', 'right'],
+      timeOut: 3000,
+      lastOnBottom: false,
+      preventDuplicates: true,
+      showProgressBar: false,
+      animate: 'scale',
+    };
     this.app = {
       name: 'MaterialLab'
     };
